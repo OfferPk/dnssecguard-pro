@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" width="1200" height="700">
+  <defs>
+    <linearGradient id="bgDns" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#050811"/>
+      <stop offset="50%" stop-color="#0c1221"/>
+      <stop offset="100%" stop-color="#020308"/>
+    </linearGradient>
+    <linearGradient id="gradLogoDns" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+    <linearGradient id="gradScoreDns" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="700" fill="url(#bgDns)"/>
+
+  <!-- Header -->
+  <rect x="30" y="24" width="1140" height="60" rx="10" fill="#121a30" stroke="#202b4e" stroke-width="1.5"/>
+  <rect x="46" y="38" width="34" height="32" rx="6" fill="url(#gradLogoDns)"/>
+  <text x="63" y="60" fill="#020617" font-family="-apple-system, sans-serif" font-weight="900" font-size="14" text-anchor="middle">DS</text>
+  <text x="92" y="58" fill="#ffffff" font-family="-apple-system, sans-serif" font-weight="700" font-size="18">DNSSECGuard Pro</text>
+  <text x="268" y="57" fill="#94a3b8" font-family="-apple-system, sans-serif" font-size="12">DNSSEC Chain-of-Trust (RFC 4034/4035) &bull; DANE TLSA (RFC 6698) Studio</text>
+
+  <rect x="880" y="40" width="135" height="26" rx="6" fill="#10b981" fill-opacity="0.15" stroke="#10b981" stroke-opacity="0.4"/>
+  <text x="947" y="57" fill="#10b981" font-family="-apple-system, sans-serif" font-size="11" font-weight="600" text-anchor="middle">RFC 4035 Chain OK</text>
+  <rect x="1025" y="40" width="130" height="26" rx="6" fill="#06b6d4" fill-opacity="0.15" stroke="#06b6d4" stroke-opacity="0.4"/>
+  <text x="1090" y="57" fill="#06b6d4" font-family="-apple-system, sans-serif" font-size="11" font-weight="600" text-anchor="middle">NSEC3 Hash Shield</text>
+
+  <!-- Left: Parameters & Inspector -->
+  <rect x="30" y="104" width="555" height="360" rx="10" fill="#121a30" stroke="#202b4e" stroke-width="1.5"/>
+  <text x="50" y="134" fill="#ffffff" font-family="-apple-system, sans-serif" font-weight="700" font-size="15">1. DNSSEC Zone &amp; Delegation Parameters (JSON)</text>
+
+  <rect x="50" y="154" width="515" height="85" rx="6" fill="#080c1a" stroke="#202b4e"/>
+  <text x="64" y="176" fill="#38bdf8" font-family="monospace" font-size="11">{"zone": "apexfinbank.com", "dnskey": [{"keyTag": 48210, "flags": 257,</text>
+  <text x="64" y="196" fill="#34d399" font-family="monospace" font-size="11"> "algorithm": 13, "algorithmName": "ECDSAP256SHA256", "keyType": "KSK"...}],</text>
+  <text x="64" y="216" fill="#a855f7" font-family="monospace" font-size="11"> "dsRecord": {"keyTag": 48210, "algorithm": 13, "digestType": 2, "matchesKsk": true}}</text>
+
+  <!-- Inspector Pills -->
+  <rect x="50" y="255" width="250" height="50" rx="6" fill="#0c1221" stroke="#202b4e"/>
+  <text x="64" y="273" fill="#64748b" font-family="-apple-system, sans-serif" font-size="10">ZONE &amp; PARENT TLD</text>
+  <text x="64" y="293" fill="#ffffff" font-family="monospace" font-size="11">apexfinbank.com (.com)</text>
+
+  <rect x="315" y="255" width="250" height="50" rx="6" fill="#0c1221" stroke="#202b4e"/>
+  <text x="329" y="273" fill="#64748b" font-family="-apple-system, sans-serif" font-size="10">CHAIN-OF-TRUST (DS)</text>
+  <text x="329" y="293" fill="#10b981" font-family="monospace" font-size="11">Valid (KeyTag: 48210)</text>
+
+  <rect x="50" y="315" width="250" height="50" rx="6" fill="#0c1221" stroke="#202b4e"/>
+  <text x="64" y="333" fill="#64748b" font-family="-apple-system, sans-serif" font-size="10">CRYPTOGRAPHIC ALGORITHM</text>
+  <text x="64" y="353" fill="#38bdf8" font-family="monospace" font-size="11">ECDSAP256SHA256 (13)</text>
+
+  <rect x="315" y="315" width="250" height="50" rx="6" fill="#0c1221" stroke="#202b4e"/>
+  <text x="329" y="333" fill="#64748b" font-family="-apple-system, sans-serif" font-size="10">DENIAL OF EXISTENCE &amp; DANE</text>
+  <text x="329" y="353" fill="#34d399" font-family="monospace" font-size="11">NSEC3 (DANE-EE Active)</text>
+
+  <rect x="50" y="375" width="515" height="74" rx="6" fill="#080c1a" stroke="#202b4e"/>
+  <text x="66" y="398" fill="#94a3b8" font-family="-apple-system, sans-serif" font-size="11">RRSIG SIGNATURE HEALTH &amp; TIMELINE:</text>
+  <text x="66" y="418" fill="#34d399" font-family="monospace" font-size="11">&#10003; RRSIG Fresh &bull; 264h Remaining (11.0 days) &bull; Zero Resolver SERVFAIL</text>
+  <text x="66" y="436" fill="#38bdf8" font-family="monospace" font-size="11">&#10003; Automated Rollover Active &bull; DANE TLSA Bound to Live SPKI</text>
+
+  <!-- Right: 10-Point Scorecard -->
+  <rect x="615" y="104" width="555" height="360" rx="10" fill="#121a30" stroke="#202b4e" stroke-width="1.5"/>
+  <text x="635" y="134" fill="#ffffff" font-family="-apple-system, sans-serif" font-weight="700" font-size="15">2. 10-Point Zero-Trust DNSSEC Scorecard</text>
+
+  <rect x="635" y="152" width="515" height="74" rx="8" fill="#0c1221" stroke="#202b4e"/>
+  <circle cx="678" cy="189" r="28" fill="url(#gradScoreDns)"/>
+  <text x="678" y="196" fill="#ffffff" font-family="-apple-system, sans-serif" font-weight="800" font-size="20" text-anchor="middle">A+</text>
+  <text x="722" y="180" fill="#ffffff" font-family="-apple-system, sans-serif" font-weight="700" font-size="16">100 / 100 Points</text>
+  <text x="722" y="200" fill="#10b981" font-family="-apple-system, sans-serif" font-size="12">Chain-of-Trust Authenticated &bull; 10 Passed &bull; 0 Outage Risks</text>
+
+  <!-- Checks List -->
+  <rect x="635" y="238" width="515" height="32" rx="4" fill="#080c1a" stroke="#10b981" stroke-width="1" stroke-dasharray="3,3"/>
+  <text x="647" y="258" fill="#34d399" font-family="monospace" font-size="11">[PASS] Chain-of-Trust: DS KeyTag (48210) matches child KSK in .com.</text>
+
+  <rect x="635" y="278" width="515" height="32" rx="4" fill="#080c1a" stroke="#10b981" stroke-width="1" stroke-dasharray="3,3"/>
+  <text x="647" y="298" fill="#34d399" font-family="monospace" font-size="11">[PASS] DNSKEY Algorithm: ECDSAP256SHA256 (13) IETF Recommended.</text>
+
+  <rect x="635" y="318" width="515" height="32" rx="4" fill="#080c1a" stroke="#10b981" stroke-width="1" stroke-dasharray="3,3"/>
+  <text x="647" y="338" fill="#34d399" font-family="monospace" font-size="11">[PASS] RRSIG Freshness: 264h remaining before signature expiration.</text>
+
+  <rect x="635" y="358" width="515" height="32" rx="4" fill="#080c1a" stroke="#10b981" stroke-width="1" stroke-dasharray="3,3"/>
+  <text x="647" y="378" fill="#34d399" font-family="monospace" font-size="11">[PASS] Denial of Existence: NSEC3 active (Blocks zone-walking).</text>
+
+  <rect x="635" y="398" width="515" height="32" rx="4" fill="#080c1a" stroke="#10b981" stroke-width="1" stroke-dasharray="3,3"/>
+  <text x="647" y="418" fill="#34d399" font-family="monospace" font-size="11">[PASS] DANE TLSA: Certificate SPKI pinned directly to DNSSEC.</text>
+
+  <!-- Bottom: Authoritative DNS Synthesizer -->
+  <rect x="30" y="484" width="1140" height="190" rx="10" fill="#121a30" stroke="#202b4e" stroke-width="1.5"/>
+  <text x="50" y="514" fill="#ffffff" font-family="-apple-system, sans-serif" font-weight="700" font-size="15">3. Multi-Engine Authoritative DNS &amp; DANE Synthesizer (BIND 9, Registrar DS, DANE TLSA, Python)</text>
+
+  <rect x="50" y="528" width="1100" height="130" rx="6" fill="#080c1a" stroke="#202b4e"/>
+  <text x="66" y="552" fill="#10b981" font-family="monospace" font-size="12"># BIND 9 Hardened dnssec-policy with RFC 7344 CDS/CDNSKEY Signaling</text>
+  <text x="66" y="572" fill="#cbd5e1" font-family="monospace" font-size="12">dnssec-policy "hardened-ecdsa" { keys { ksk lifetime 365d algorithm 13; zsk lifetime 90d algorithm 13; };</text>
+  <text x="66" y="592" fill="#34d399" font-family="monospace" font-size="12">nsec3param iterations 1 optout no salt-length 8;  publish-cds { true; };  publish-cdnskey { true; }; };</text>
+  <text x="66" y="612" fill="#94a3b8" font-family="monospace" font-size="12"># Double-DS overlapping rollovers eliminate SERVFAIL resolution lockouts</text>
+</svg>
